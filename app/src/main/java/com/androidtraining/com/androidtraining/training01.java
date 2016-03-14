@@ -1,5 +1,6 @@
 package com.androidtraining.com.androidtraining;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class training01 extends AppCompatActivity {
+
+
+    public static final String EXTRAMSG = "com.training.training01.msg";
+
+
+    EditText editText;
+    Button sendBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,31 @@ public class training01 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        initUI();
+    }
+
+
+    private void initUI()
+    {
+        editText = (EditText)findViewById(R.id.editText);
+        sendBtn = (Button)findViewById(R.id.sendBtn);
+
+
+        sendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(training01.this,Training02.class);
+                String temp = editText.getText().toString();
+                intent.putExtra(EXTRAMSG,temp);
+
+                startActivity(intent);
+
+
+            }
+        });
+
+
     }
 
     @Override

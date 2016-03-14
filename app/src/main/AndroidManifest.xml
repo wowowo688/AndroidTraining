@@ -18,6 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Training02"
+            android:label="@string/title_activity_training02"
+            android:parentActivityName=".training01"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androidtraining.com.androidtraining.training01" />
+        </activity>
     </application>
 
 </manifest>

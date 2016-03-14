@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AndroidTraining</string>
     <string name="action_settings">Settings</string>
+    <string name="texthint">set message</string>
+    <string name="btnname">start training02</string>
+    <string name="title_activity_training02">Training02</string>
 </resources>
