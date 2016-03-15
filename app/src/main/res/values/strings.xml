@@ -4,4 +4,5 @@
     <string name="texthint">set message</string>
     <string name="btnname">start training02</string>
     <string name="title_activity_training02">Training02</string>
+    <string name="action_search_str">Search</string>
 </resources>

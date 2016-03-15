@@ -1,5 +1,6 @@
 package com.androidtraining.com.androidtraining;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -50,9 +51,9 @@ public class training01 extends AppCompatActivity {
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(training01.this,Training02.class);
+                Intent intent = new Intent(training01.this, Training02.class);
                 String temp = editText.getText().toString();
-                intent.putExtra(EXTRAMSG,temp);
+                intent.putExtra(EXTRAMSG, temp);
 
                 startActivity(intent);
 
@@ -79,8 +80,18 @@ public class training01 extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            new AlertDialog.Builder(this).setTitle("Setting").
+                    setIcon(R.mipmap.ic_launcher).setMessage("setting click!").show();
             return true;
         }
+
+        if (id == R.id.action_search) {
+            new AlertDialog.Builder(this).setTitle("Search").
+                    setIcon(R.mipmap.ic_launcher).setMessage("search click!").show();
+            return true;
+        }
+
+
 
         return super.onOptionsItemSelected(item);
     }
