@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">安卓旅程</string>
+    <string name="action_settings">设置</string>
+    <string name="texthint">设置消息</string>
+    <string name="btnname">打开 窗口2</string>
+    <string name="title_activity_training02">窗口2</string>
+    <string name="action_search_str">查询</string>
+</resources>
